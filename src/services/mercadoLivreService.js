@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const ML_SEARCH_URL = 'https://api.mercadolibre.com/sites/MLB/search';
-const ML_AFFILIATE_TOOL = process.env.ML_AFFILIATE_TOOL || 'garagem_pro';
+const ML_AFFILIATE_TOOL = process.env.ML_AFFILIATE_TOOL || '16023631';
 
 /**
  * Busca produtos no Mercado Livre via API pública.
