@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: garagem-pro-tire-search
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ML_AFFILIATE_TOOL
+        value: garagem_pro
+      - key: AMAZON_AFFILIATE_TAG
+        value: garagempro-20       # substituir pelo seu tag real
+      - key: CACHE_TTL_SECONDS
+        value: "3600"
+      # Os campos abaixo devem ser configurados MANUALMENTE no painel Render
+      # Dashboard → Environment → Add Environment Variable
+      - key: SHOPEE_APP_ID
+        sync: false
+      - key: SHOPEE_APP_SECRET
+        sync: false
+      - key: API_SECRET_KEY
+        sync: false
